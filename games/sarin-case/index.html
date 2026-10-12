@@ -346,19 +346,20 @@ function render(){
  renderHud();
  document.getElementById('view').innerHTML=state.tab==='evidence'?renderEvidence():state.tab==='interview'?renderInterview():renderBoard();
  renderSide();renderLogs();renderEnding();
- document.querySelectorAll('[data-tab]').forEach(function(b){b.addEventListener('click',function(){state.tab=b.dataset.tab;render();});});
+ 
 }
 document.addEventListener('click',function(ev){
  const btn=ev.target.closest('button');
- if(!btn||state.finished)return;
- if(btn.dataset.tab){state.tab=btn.dataset.tab;render();return;}
+ if(!btn)return;
  const action=btn.dataset.action,id=btn.dataset.id;
+ if(action==='restart'){freshState();render();return;}
+ if(state.finished)return;
+ if(btn.dataset.tab){state.tab=btn.dataset.tab;render();return;}
  if(action==='search')doSearch(id);
  else if(action==='ask')askQuestion(id);
  else if(action==='present')presentEvidence(id);
  else if(action==='pressure')pressure();
  else if(action==='select-suspect'){if(suspectUnlocked(id)){state.activeSuspect=id;state.pending=null;state.tab='interview';render();}}
- else if(action==='restart'){freshState();render();}
  else if(action==='show-gauges'){alert('動揺は正しい証拠提示で上昇。100で問い詰めると自供します。反発は誤った証拠提示や早すぎる追及で上昇し、100で黙秘になります。');}
 });
 freshState();render();
