@@ -1,21 +1,36 @@
 # Playground
 
-A public workspace for small web experiments, prototypes, simulations, and interactive demonstrations.
+個人用の実験リポジトリです。Web作品、計算ツール、ゲーム試作、AI関連の検証を、作品ごとに分けて保存します。
 
-## Current experiment
+## 入口
 
-### 1995 Tokyo subway sarin incident — Twitter-style timeline
+- [実験一覧ページ](./index.html)
+- [Web実験](./web/)
 
-A fictional reconstruction of how an unfolding timeline might have looked if Twitter had existed in 1995.
+## ディレクトリ構成
 
-- Open the demo: [index.html](./index.html)
-- All posts and accounts are fictional, not historical quotations or authentic social-media records.
-- Dates and major milestones are intended as a historical overview, not a substitute for primary-source research.
+```text
+playground/
+├── README.md
+├── index.html              # 実験一覧・ポータル
+├── web/                    # HTML / CSS / JavaScript
+│   └── sarin-twitter/      # Twitter風の歴史再現UI
+├── tools/                  # 計算機・シミュレーター
+├── games/                  # ゲームの試作
+├── ai/                     # AI関連の実験
+└── archive/                # 旧版・保管用
+```
 
-## Adding experiments
+## 実験：地下鉄サリン事件のTwitter風タイムライン
 
-Keep each experiment in its own directory when practical. Include a short README with purpose, usage, limitations, and sources where relevant. Avoid overwriting existing experiments unless an intentional update is requested.
+- [デモを開く](./web/sarin-twitter/index.html)
+- 1995年にTwitterが存在したという仮定に基づく創作です。投稿・アカウントは架空で、実在する投稿や証言ではありません。
+- 歴史的な日付と節目の概要を扱います。厳密な調査では一次資料を確認してください。
 
-## GitHub Pages
+## 追加・更新のルール
 
-The main demo is located at the repository root as `index.html`. To serve it as a website, enable GitHub Pages in the repository settings and select the `main` branch and `/(root)` as the publishing source.
+1. 既存作品を不用意に上書きせず、原則として作品ごとに専用ディレクトリを作る。
+2. 作品には必要に応じて `README.md` を添え、目的、起動方法、制約、情報源を記録する。
+3. 単体で動くHTMLは、外部依存を増やさず、できるだけローカルでも動く形にする。
+4. 古い版を残す必要がある場合は `archive/` に移し、現行版と区別する。
+5. 公開ページとして使う場合は、GitHub Pagesの公開元をリポジトリの `main` ブランチに設定する。公開設定が有効かどうかは別途確認する。
