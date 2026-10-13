@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="2026年10月14日時点で、PC・Nintendo Switch/Switch 2・PlayStation・Xboxの実質独占タイトルとプラットフォームの重なりを整理するインタラクティブ比較。">
+<title>ゲームの実質独占マップ｜2026年10月</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1020;--panel:#121a2b;--panel2:#172238;--line:#293752;--text:#edf2fb;--muted:#a6b4ca;--accent:#a9c6ff;--green:#86d9ac;--yellow:#f5cd78;--red:#ff9d9d;--radius:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(1000px 420px at 10% -10%,#1c3154 0,transparent 65%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:#a9cfff;text-underline-offset:3px}a:hover{color:#fff}header,main,footer{width:min(1440px,calc(100% - 36px));margin:0 auto}
+header{padding:52px 0 28px}.eyebrow{color:var(--accent);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800}.headline{max-width:980px;font-size:clamp(2.1rem,5vw,4.6rem);line-height:1.06;letter-spacing:-.045em;margin:14px 0 18px}.lede{max-width:980px;color:#c4d0e3;font-size:1.08rem}.stamp{display:inline-flex;gap:8px;align-items:center;margin-top:16px;padding:6px 10px;border:1px solid #3e5375;border-radius:999px;color:#c5d6f2;font-size:.78rem}
+main{padding-bottom:68px}.section{margin:28px 0 42px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:14px}.section h2{font-size:clamp(1.35rem,2.3vw,2rem);line-height:1.2;margin:0}.section-intro{color:var(--muted);max-width:850px;margin:8px 0 18px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.card{background:linear-gradient(145deg,rgba(255,255,255,.035),transparent 70%),var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:19px;min-width:0}.card h3{font-size:1.08rem;margin:0 0 7px}.card p{color:var(--muted);font-size:.92rem;margin:0}.card .verdict{display:inline-block;font-size:.74rem;font-weight:800;margin:0 0 9px;padding:3px 8px;border-radius:6px;background:#243451;color:#cfe0ff}.card.nintendo{border-top:3px solid #e96b7e}.card.pc{border-top:3px solid #9ebfff}.card.ps{border-top:3px solid #6ea7ff}.card.xbox{border-top:3px solid #7fd7a7}
+.callout{margin-top:16px;border:1px solid #3c5274;background:#101a2b;border-radius:var(--radius);padding:18px 20px;color:#d4def0}.callout strong{color:#fff}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}table{border-collapse:separate;border-spacing:0;width:100%;min-width:900px;font-size:.91rem}th,td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}thead th{position:sticky;top:0;background:#1b2740;color:#dbe7fa;font-size:.78rem;letter-spacing:.02em;z-index:1}tbody tr:last-child td{border-bottom:0}tbody tr:hover{background:rgba(157,188,243,.045)}td p{margin:0 0 7px}td p:last-child{margin-bottom:0}.muted{color:var(--muted)}.tag{display:inline-block;border:1px solid #425674;border-radius:6px;padding:2px 7px;white-space:nowrap;font-size:.76rem;color:#dae5f7}.tag.green{border-color:#326d58;color:#a4efc6}.tag.gold{border-color:#76613a;color:#ffe1a1}.tag.red{border-color:#77414a;color:#ffbdc4}.tag.blue{border-color:#3d5d8b;color:#b9d6ff}
+.legend{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 16px}.controls{display:grid;grid-template-columns:minmax(240px,1fr) minmax(170px,240px) minmax(170px,220px);gap:10px;margin:18px 0 12px}.controls input,.controls select{width:100%;background:#111a2c;border:1px solid #3a4b67;border-radius:10px;padding:12px;color:var(--text);font:inherit}.count{color:var(--muted);font-size:.84rem;margin:0 0 10px}.status{font-weight:750}.status.live{color:var(--green)}.status.future{color:var(--yellow)}.status.legacy{color:#c9b8ff}
+.note{font-size:.86rem;color:var(--muted)}.source-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;list-style:none;padding:0;margin:16px 0}.source-list li{padding:12px 14px;background:var(--panel);border:1px solid var(--line);border-radius:10px;font-size:.88rem}.source-list .snum{font-weight:800;color:var(--accent);margin-right:6px}.source-list small{display:block;margin-top:4px;color:var(--muted)}
+.bullets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.bullets .card{padding:17px}.bullets h3{margin-bottom:8px}.footer{border-top:1px solid var(--line);padding:20px 0 40px;color:var(--muted);font-size:.82rem}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.bullets{grid-template-columns:1fr}.controls{grid-template-columns:1fr 1fr}.controls input{grid-column:1/-1}.source-list{grid-template-columns:1fr}.headline{max-width:760px}}
+@media(max-width:520px){header{padding-top:32px}.grid{grid-template-columns:1fr}.controls{grid-template-columns:1fr}.controls input{grid-column:auto}.section-head{display:block}.card{padding:17px}header,main,footer{width:min(100% - 24px,1440px)}}
+@media print{body{background:#fff;color:#111}header,main,footer{width:100%}.card,.callout,.table-wrap,.source-list li{background:#fff;border-color:#bbb;color:#111}p,.muted,.section-intro,.note,.footer{color:#444}thead th{background:#eee;color:#111}a{color:#124f95}.controls{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">Platform Exclusivity · Field Guide</div>
+  <h1 class="headline">ゲームの「実質独占」<br>全体マップ</h1>
+  <p class="lede">PC、Nintendo Switch／Switch 2、PlayStation、Xboxを、「タイトルを遊ぶために、実際にどの環境が必要か」という基準で比較。作品の数を根拠なく断定せず、ハード限定・家庭用機限定・時限独占・旧作互換・PC移植済みを分けて整理する。</p>
+  <div class="stamp">調査基準日：2026年10月14日　／　公式に確認できる販売・対応情報を優先</div>
+</header>
+
+<main>
+<section class="section">
+  <div class="section-head"><h2>先に結論</h2></div>
+  <div class="grid">
+    <article class="card pc"><span class="verdict">PCの代替困難性：高い</span><h3>PCは独自ジャンルと幅が強み</h3><p>競技系、MMO、RTS、シミュレーション、早期アクセス、ユーザー制作コンテンツなど、公式コンソール版がない作品群がある。Steamの総登録数をPC独占数に読み替えることはできない。</p></article>
+    <article class="card nintendo"><span class="verdict">任天堂IPの独自性：非常に高い</span><h3>Switchは任天堂作品を遊ぶ鍵</h3><p>マリオ、ゼルダ、どうぶつの森、スプラトゥーン、ポケモンなど、公式には任天堂ハードでしか遊べない主要シリーズがまとまっている。Switch 2専用作とSwitch互換作は別々に見る。</p></article>
+    <article class="card ps"><span class="verdict">現行シングルプレイ独占：高い</span><h3>PlayStationは作品ごとの差が大きい</h3><p>ASTRO BOT、Ghost of Yōtei、SAROSなど、PS5で遊ぶ意味の大きい作品がある。他方、God of War、Ghost of Tsushima、Spider-Manなど、過去に独占と呼ばれた作品のPC移植も多い。</p></article>
+    <article class="card xbox"><span class="verdict">Xbox実機だけの強み：相対的に小さい</span><h3>Xbox作品はPCと重なりやすい</h3><p>Xboxの自社作品はWindows PCとの同時展開が多く、コンソール独占は「PSやSwitchでは出ない」という意味で使われることがある。ただしFable IIのような旧作互換カタログは別の価値を持つ。</p></article>
+  </div>
+  <div class="callout"><strong>最重要：</strong>「PCで遊べる」「家庭用ゲーム機では遊べる」「その特定の本体でしか遊べない」は別の判定。現時点で最も実用的な結論は、PCはタイトル数の広さと独自ジャンル、任天堂は独自IP、PlayStationは現行の一部大作と旧作、XboxはPCとの重なりと後方互換を軸に比較すること。</div>
+</section>
+
+<section class="section" id="definitions">
+  <div class="section-head"><h2>「実質独占」の定義</h2></div>
+  <p class="section-intro">このページでは「公式に一般ユーザーがプレイできる環境」を基準にする。非公式エミュレーター、非公式移植、未承認のROM、コミュニティ改造による動作は、公式に販売・対応しているプラットフォームとは別扱いにした。</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>分類</th><th>意味</th><th>独占として数える？</th><th>判定の注意</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tag green">ハード／ファミリー限定</span></td><td>公式版が特定のハード系列にしかない。</td><td>はい。最も強い実質独占。</td><td>Switch 1とSwitch 2のどちらで動くか、PS4版とPS5版の有無を分ける。</td></tr>
+      <tr><td><span class="tag blue">PC専用クライアント</span></td><td>PC向けの公式版はあるが、公式コンソール版を確認できない。</td><td>はい。ただし「Windows専用」と「PC全体専用」は別。</td><td>Windows／macOS／Linuxへの対応も記録し、Steam専用という意味に混同しない。</td></tr>
+      <tr><td><span class="tag gold">コンソール独占</span></td><td>競合する家庭用機では遊べないが、PC版は存在する／予定される。</td><td>家庭用機比較では独占、ハードウェア限定ではない。</td><td>Xbox作品がPCでも遊べる場合の典型例。</td></tr>
+      <tr><td><span class="tag gold">時限独占／発売時期の差</span></td><td>最初は一部の機種だけだが、あとから他機種に出る。</td><td>期間中の実質独占のみ。</td><td>「発売時点で独占」と「現在も独占」を混ぜない。</td></tr>
+      <tr><td><span class="tag">旧作・後方互換</span></td><td>旧世代作が後方互換や公式クラシック配信で遊べる。</td><td>実用上の独占になり得る。</td><td>新作の独占数とは別に、旧作カタログの価値として見る。</td></tr>
+      <tr><td><span class="tag">強化版／エディション差</span></td><td>基本ゲームは複数機種にあり、特定機種で画質・機能・追加内容が増える。</td><td>基本ゲームを二重カウントしない。</td><td>Switch 2 Editionなどを独立した新規独占作品として数えない。</td></tr>
+      <tr><td><span class="tag">サブスク／クラウド</span></td><td>Game Pass、PS Plus、Nintendo Switch Online等で配信・ストリーミングされる。</td><td>原則、タイトル独占とは別。</td><td>配信対象は変動する。購入できることと、会員期間中にアクセスできることを分ける。</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="section" id="platforms">
+  <div class="section-head"><h2>プラットフォーム別・実質独占の全体像</h2></div>
+  <p class="section-intro">「強さ」は作品数の推測値ではなく、他の環境で代替できないコンテンツを求める際の定性的な評価。網羅的な全タイトル数は、共通のデータ範囲・版の扱い・発売地域をそろえたタイトル単位の照合がない限り、信頼できる値にできない。</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>環境</th><th>実質独占の中核</th><th>代替できない理由／例</th><th>独占性を弱める要因</th><th>総合判定</th></tr></thead>
+    <tbody>
+      <tr><td><strong>PC（Windows／macOS／Linux）</strong></td><td>PCクライアント中心の競技系・MMO・RTS・シミュレーション・早期アクセス・MOD文化。</td><td>『Counter-Strike 2』『Dota 2』『League of Legends』『World of Warcraft』などは公式PCクライアントが中心。多数の小規模作品やユーザー制作コンテンツを同じ環境で利用できる。</td><td>Steamの登録作品にはコンソールと重複する作品が大量に含まれる。「Steamにある」ことは「PC専用」の意味ではない。</td><td><span class="tag blue">独自ジャンルと幅が強い</span></td></tr>
+      <tr><td><strong>Nintendo Switch／Switch 2</strong></td><td>任天堂の自社IP、Switchファミリー専用の作品、Switch 2のみで動く新作。</td><td>Switchファミリーでは『ゼルダの伝説 ティアーズ オブ ザ キングダム』『あつまれ どうぶつの森』『スプラトゥーン3』など。Switch 2専用の例は『マリオカート ワールド』『ドンキーコング バナンザ』『Pokémon Pokopia』。</td><td>Switch 2は多くの初代Switchソフトと互換性があるため、従来作すべてがSwitch 2専用になるわけではない。互換非対応・制限作もある。</td><td><span class="tag red">独自IPの代替困難性が最も明快</span></td></tr>
+      <tr><td><strong>PlayStation 4／5</strong></td><td>PSでのみ遊べる現行作、PS4／PS5の後方互換作、PC未移植の主要ファーストパーティ作品。</td><td>『ASTRO BOT』『Ghost of Yōtei』『SAROS』『Gran Turismo 7』『Bloodborne』などは、公式対応機種から見てPlayStation側の代替困難な作品例。</td><td>『God of War』『Ghost of Tsushima』『Marvel's Spider-Man 2』などPC版が出た作品は、現在の「PSハード限定」から外れる。2026年の今後の方針は、個々のタイトルで確認が必要。</td><td><span class="tag blue">現行大作と旧作に強い</span></td></tr>
+      <tr><td><strong>Xbox One／Series X|S</strong></td><td>Xbox本体で動く旧作互換カタログ、Xboxコンソール独占作、Game Pass等の利用形態。</td><td>『Fable II』は後方互換作品の代表例。一方、『Gears of War: E-Day』はXbox本体だけでなくWindows PC／Steamでも配信され、実機限定ではない。</td><td>Windows PCとの同時発売が多い。『Xbox console exclusive』は通常「PlayStationやNintendoの家庭用機では出ない」を指し、PCを含めて排他的という意味ではない。</td><td><span class="tag gold">Xbox実機限定は限定的、旧作互換は別価値</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="section" id="catalog">
+  <div class="section-head"><h2>作品ごとの実質独占一覧</h2></div>
+  <p class="section-intro">下表は「全作品を漏れなく羅列した販売データベース」ではなく、各種の独占を実際のタイトルで区別するための実用カタログ。フィルターと検索で、プラットフォーム別・独占タイプ別に絞り込める。公式の対応機種ページや公式発表が見つからない事項は、断定ではなく「現時点で公式版を確認できず」と記載する。</p>
+  <div class="controls">
+    <input id="search" type="search" placeholder="作品名・説明を検索（例：PC、後方互換、時限）" aria-label="作品検索">
+    <select id="platform" aria-label="プラットフォームで絞る">
+      <option value="">すべてのプラットフォーム</option><option>PC</option><option>Nintendo</option><option>PlayStation</option><option>Xbox</option><option>複数／移植済み</option>
+    </select>
+    <select id="kind" aria-label="独占タイプで絞る">
+      <option value="">すべての分類</option><option>PCクライアント中心</option><option>Switch 2専用</option><option>Switchファミリー専用</option><option>PlayStation限定</option><option>Xboxレガシー</option><option>家庭用機独占ではない</option><option>移植済み・独占終了</option><option>機種／版の差</option>
+    </select>
+  </div>
+  <p class="count" id="count" aria-live="polite">作品一覧を表示しています。</p>
+  <div class="table-wrap">
+    <table id="games">
+      <thead><tr><th>タイトル／シリーズ</th><th>公式に遊べる主な環境</th><th>実質独占の分類</th><th>この判定が意味すること</th><th>状態／根拠</th></tr></thead>
+      <tbody>
+        <tr data-platform="PC" data-type="PCクライアント中心"><td><strong>Counter-Strike 2</strong></td><td>Windows／SteamOS・Linux</td><td><span class="tag blue">PCクライアント中心</span></td><td>公式の対応OSはPC系。Xbox／PlayStation／Switch向けの公式版とは別の、PCの競技FPSカタログ。</td><td><span class="status live">配信中</span><br><a href="https://store.steampowered.com/app/730/CounterStrike_2/">Steam公式ページ</a></td></tr>
+        <tr data-platform="PC" data-type="PCクライアント中心"><td><strong>Dota 2</strong></td><td>Windows／macOS／Linux</td><td><span class="tag blue">PCクライアント中心</span></td><td>PCのMOBA。公式Steamページ上の対応OSにPC系OSが列挙され、公式コンソール版は確認できない。</td><td><span class="status live">配信中</span><br><a href="https://store.steampowered.com/app/570/Dota_2/">Steam公式ページ</a></td></tr>
+        <tr data-platform="PC" data-type="PCクライアント中心"><td><strong>League of Legends（PC版）</strong></td><td>Windows／macOS</td><td><span class="tag blue">PCクライアント中心</span></td><td>PC版の競技シーンとクライアントが独自の価値。スマートフォン版『Wild Rift』は同一のPC版そのものではない。</td><td><span class="status live">配信中</span><br><a href="https://www.leagueoflegends.com/ja-jp/download/">Riot公式ダウンロード</a></td></tr>
+        <tr data-platform="PC" data-type="PCクライアント中心"><td><strong>World of Warcraft</strong></td><td>Windows／Mac</td><td><span class="tag blue">PCクライアント中心</span></td><td>長期運営MMORPGの代表例。公式案内はWindows／Mac向けBattle.netクライアントを示す。</td><td><span class="status live">配信中</span><br><a href="https://worldofwarcraft.blizzard.com/en-us/start">Blizzard公式</a></td></tr>
+        <tr data-platform="PC" data-type="PCクライアント中心"><td><strong>StarCraft II</strong></td><td>PC（Windows／Mac）</td><td><span class="tag blue">PCクライアント中心</span></td><td>マウス中心のRTSを代表するPCカタログ。PCゲームの独自性は単なる登録本数だけでなく、ジャンル・操作・MODの蓄積にもある。</td><td><span class="status live">配信中</span><br><a href="https://starcraft2.blizzard.com/">Blizzard公式サイト</a></td></tr>
+        <tr data-platform="PC" data-type="PCクライアント中心"><td><strong>Escape from Tarkov</strong></td><td>Windows PC</td><td><span class="tag blue">PCクライアント中心</span></td><td>PC向けに提供されるハードコア脱出シューターの代表例。コンソール版の存在を確認せず、PC専用カテゴリの例として扱う。</td><td><span class="status live">PC版提供</span><br><a href="https://www.escapefromtarkov.com/">公式サイト</a></td></tr>
+
+        <tr data-platform="Nintendo" data-type="Switch 2専用"><td><strong>マリオカート ワールド</strong></td><td>Nintendo Switch 2</td><td><span class="tag red">Switch 2専用</span></td><td>Switch 2で遊ぶ理由になる代表的な任天堂新作。初代Switch用ソフトではない。</td><td><span class="status live">配信中</span><br><a href="https://www.nintendo.com/jp/games/switch2/aaaaa/products/soft.html">任天堂公式商品情報</a></td></tr>
+        <tr data-platform="Nintendo" data-type="Switch 2専用"><td><strong>ドンキーコング バナンザ</strong></td><td>Nintendo Switch 2</td><td><span class="tag red">Switch 2専用</span></td><td>任天堂公式ストアがSwitch 2向け作品として案内。PCや競合家庭用機の公式版は確認できない。</td><td><span class="status live">配信中</span><br><a href="https://www.nintendo.com/us/store/products/donkey-kong-bananza-switch-2/">任天堂公式ストア</a></td></tr>
+        <tr data-platform="Nintendo" data-type="Switch 2専用"><td><strong>Pokémon Pokopia（ぽこ あ ポケモン）</strong></td><td>Nintendo Switch 2</td><td><span class="tag red">Switch 2専用</span></td><td>公式ストアで「Switch 2専用」と明示。初代SwitchやPC版と同一作品を共有するケースではない。</td><td><span class="status live">配信中</span><br><a href="https://www.nintendo.com/us/store/products/pokemon-pokopia-switch-2/">任天堂公式ストア</a></td></tr>
+        <tr data-platform="Nintendo" data-type="Switchファミリー専用"><td><strong>ゼルダの伝説 ティアーズ オブ ザ キングダム</strong></td><td>Switch／Switch 2互換</td><td><span class="tag red">Switchファミリー専用</span></td><td>Switch 2専用ではなく、任天堂のSwitchファミリーに属する独占。新ハードと旧ハードの専用数を混ぜない。</td><td><span class="status live">配信中</span><br><a href="https://www.nintendo.com/jp/games/switch/index.html">任天堂Switchソフト一覧</a> ・ <a href="https://support.nintendo.com/jp/switch2/play/physical/index.html">Switch 2互換情報</a></td></tr>
+        <tr data-platform="Nintendo" data-type="Switchファミリー専用"><td><strong>あつまれ どうぶつの森</strong></td><td>Switch／Switch 2互換</td><td><span class="tag red">Switchファミリー専用</span></td><td>PCやPS／Xboxでは公式版が提供されていない代表的な任天堂IP。</td><td><span class="status live">配信中</span><br><a href="https://www.nintendo.com/jp/games/switch/index.html">任天堂Switchソフト一覧</a></td></tr>
+        <tr data-platform="Nintendo" data-type="Switchファミリー専用"><td><strong>スプラトゥーン3</strong></td><td>Switch／Switch 2互換</td><td><span class="tag red">Switchファミリー専用</span></td><td>任天堂ハードのオンライン対戦IP。ジャンルが他機種にもあることと、同一タイトルが移植されていることは別。</td><td><span class="status live">配信中</span><br><a href="https://www.nintendo.com/jp/games/switch/index.html">任天堂Switchソフト一覧</a></td></tr>
+        <tr data-platform="Nintendo" data-type="Switchファミリー専用"><td><strong>スーパーマリオ オデッセイ</strong></td><td>Switch／Switch 2互換</td><td><span class="tag red">Switchファミリー専用</span></td><td>任天堂ファーストパーティの旧作カタログ。後方互換によってSwitch 2でも遊べることは、Switch 2専用という意味ではない。</td><td><span class="status live">配信中</span><br><a href="https://www.nintendo.com/jp/games/switch/index.html">任天堂Switchソフト一覧</a> ・ <a href="https://support.nintendo.com/jp/switch2/play/physical/index.html">Switch 2互換情報</a></td></tr>
+
+        <tr data-platform="PlayStation" data-type="PlayStation限定"><td><strong>ASTRO BOT</strong></td><td>PS5</td><td><span class="tag blue">PS5限定</span></td><td>PlayStation公式FAQがPS5専用と明示する、現行の分かりやすい独占作の例。</td><td><span class="status live">配信中</span><br><a href="https://www.playstation.com/en-us/games/astro-bot/">PlayStation公式（PS5専用の記載）</a></td></tr>
+        <tr data-platform="PlayStation" data-type="PlayStation限定"><td><strong>Ghost of Yōtei</strong></td><td>PS5</td><td><span class="tag blue">PS5限定（現状）</span></td><td>日本のPlayStation公式ページはPS5版を案内。2026年3月のBloomberg報道ではPC版を出さない大作の例として挙げられた。報道は公式包括発表ではないため、将来の対応機種は個別確認が必要。</td><td><span class="status live">配信中</span><br><a href="https://www.playstation.com/ja-jp/games/ghost-of-yotei/">PlayStation公式</a> ・ <a href="https://www.bloomberg.com/news/articles/2026-03-04/sony-pulls-back-from-playstation-games-on-pc">Bloomberg報道（2026/3/4）</a></td></tr>
+        <tr data-platform="PlayStation" data-type="PlayStation限定"><td><strong>SAROS</strong></td><td>PS5</td><td><span class="tag blue">PS5限定（現状）</span></td><td>2026年4月発売のPS5タイトル。Bloomberg報道ではPC展開を見送る方針の例として挙げられた。</td><td><span class="status live">配信中</span><br><a href="https://www.playstation.com/ja-jp/games/saros/">PlayStation公式</a> ・ <a href="https://www.bloomberg.com/news/articles/2026-03-04/sony-pulls-back-from-playstation-games-on-pc">Bloomberg報道</a></td></tr>
+        <tr data-platform="PlayStation" data-type="PlayStation限定"><td><strong>Gran Turismo 7</strong></td><td>PS4／PS5</td><td><span class="tag blue">PlayStationファミリー限定</span></td><td>公式ストアの対応機種はPS4とPS5。PCを含む幅広い移植が進んだPlayStation作品群とは異なる例。</td><td><span class="status live">配信中</span><br><a href="https://www.playstation.com/en-us/games/gran-turismo-7/">PlayStation公式</a></td></tr>
+        <tr data-platform="PlayStation" data-type="PlayStation限定"><td><strong>Bloodborne</strong></td><td>PS4（PS5では後方互換）</td><td><span class="tag legacy">旧作の実質独占</span></td><td>PS4の代表的な独占作で、PS5ではPS4互換を通じてプレイ可能。公式PC版がないため、PCだけで完結したい人には埋まらない穴になる。</td><td><span class="status legacy">旧作・互換</span><br><a href="https://www.playstation.com/en-us/games/bloodborne/">PlayStation公式</a></td></tr>
+        <tr data-platform="複数／移植済み" data-type="移植済み・独占終了"><td><strong>God of War／God of War Ragnarök</strong></td><td>PlayStation＋PC（Steam／Epic）</td><td><span class="tag">移植済み・独占終了</span></td><td>かつてのPlayStation独占と、現在PCで遊べるかは別。両作品ともPlayStation公式ページがPC版を案内する。</td><td><span class="status live">PC版あり</span><br><a href="https://www.playstation.com/en-us/god-of-war">PlayStation公式PC案内</a></td></tr>
+        <tr data-platform="複数／移植済み" data-type="移植済み・独占終了"><td><strong>Ghost of Tsushima Director's Cut</strong></td><td>PS＋PC（Steam／Epic）</td><td><span class="tag">移植済み・独占終了</span></td><td>PC版が正式に提供されているため「現在PSハードでしか遊べない作品」の数には含めない。ただしXbox／任天堂ハードにも出たという意味ではない。</td><td><span class="status live">PC版あり</span><br><a href="https://www.playstation.com/en-us/pc/pc-games/">PlayStation公式PC作品一覧</a> ・ <a href="https://store.steampowered.com/app/2215430/Ghost_of_Tsushima_DIRECTORS_CUT/">Steam</a></td></tr>
+        <tr data-platform="複数／移植済み" data-type="移植済み・独占終了"><td><strong>Marvel's Spider-Man 2</strong></td><td>PS5＋PC（Steam）</td><td><span class="tag">移植済み・独占終了</span></td><td>2025年1月にPC版が発売。PlayStationとPCの両方で遊べるため、PS5ハード限定の現行作には含めない。</td><td><span class="status live">PC版あり</span><br><a href="https://store.steampowered.com/app/2651280/Marvels_Spider_Man_2/">Steam公式</a></td></tr>
+
+        <tr data-platform="Xbox" data-type="Xboxレガシー"><td><strong>Fable II</strong></td><td>Xbox 360／Xbox One・Seriesの後方互換</td><td><span class="tag legacy">Xboxレガシー</span></td><td>Xboxの後方互換カタログの代表例。旧作まで含めた「公式に遊べる総体」ではXboxにもPCで単純に代替できない作品が残る。</td><td><span class="status legacy">旧作・互換</span><br><a href="https://news.xbox.com/en-us/2015/11/09/the-list-of-xbox-one-backward-compatibility-games-is-now-available/">Xbox Wireの互換タイトルリスト</a></td></tr>
+        <tr data-platform="Xbox" data-type="家庭用機独占ではない"><td><strong>Gears of War: E-Day</strong></td><td>Xbox Series X|S／Windows PC／Steam</td><td><span class="tag gold">Xbox＋PCエコシステム</span></td><td>2026年10月6日発売。Xbox WireはWindows PCとSteamも公式対応先として明記。家庭用機ではXbox側の独占性がある一方、Xbox本体そのものの独占ではない。</td><td><span class="status live">配信中</span><br><a href="https://news.xbox.com/en-us/2026/10/01/gears-of-war-e-day-early-access-launch-trailer-xbox/">Xbox Wire公式（発売・対応機種）</a></td></tr>
+        <tr data-platform="Xbox" data-type="家庭用機独占ではない"><td><strong>Clockwork Revolution</strong></td><td>Xbox Series X|S／Windows PC／Steam（予定）</td><td><span class="tag gold">Xbox＋PCエコシステム</span></td><td>2027年発売予定。Xbox公式ページはXboxコンソールとPCの両方を案内。コンソール独占という告知を、Xbox本体のみの独占と読み替えてはいけない。</td><td><span class="status future">発売予定</span><br><a href="https://www.xbox.com/ja-jp/games/clockwork-revolution">Xbox公式</a> ・ <a href="https://news.xbox.com/ja-jp/2026/06/11/clockwork-revolution-preview-xbox-games-showcase-2026/">Xbox Wire</a></td></tr>
+        <tr data-platform="Xbox" data-type="家庭用機独占ではない"><td><strong>Forza Horizon 6</strong></td><td>Xbox／PC（PS5版は後日予定）</td><td><span class="tag gold">発売時期の差</span></td><td>2026年はXbox／PCが先行し、PS5版は2027年1月26日予定と報じられた。PC版がある以上、Xbox本体限定ではなく「コンソール間の時差」と整理する。</td><td><span class="status live">Xbox／PC版あり</span><br><a href="https://www.theverge.com/news/989314/forza-horizon-6-ps5-release-date-january-2027-delay">The Verge（PS5版の延期報道）</a></td></tr>
+        <tr data-platform="複数／移植済み" data-type="機種／版の差"><td><strong>Pokémon LEGENDS Z-A／Switch 2 Edition</strong></td><td>Switch版＋Switch 2 Edition</td><td><span class="tag">機種／版の差</span></td><td>Switch版とSwitch 2 Editionが存在するため、タイトル名だけでSwitch 2専用と数えるのは誤り。追加機能・性能差と「ゲーム本編を遊べる機種」を分ける。</td><td><span class="status live">両版あり</span><br><a href="https://www.nintendo.co.jp/ir/finance/software/index.html">任天堂IRの販売実績・集計注記</a> ・ <a href="https://support.nintendo.com/jp/switch2/play/physical/index.html">任天堂公式互換説明</a></td></tr>
+        <tr data-platform="複数／移植済み" data-type="移植済み・独占終了"><td><strong>Helldivers 2</strong></td><td>PS5＋PC</td><td><span class="tag">家庭用機独占ではない</span></td><td>PlayStation公式はPC版・クロスプレイを案内。PSのブランド作品でも、発売後にPC版が出たマルチプレイ作品はPSハード限定ではない。</td><td><span class="status live">PC版あり</span><br><a href="https://www.playstation.com/en-us/support/playstation-gaming-on-pc/">PlayStation PCゲーム案内</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">注：表の「公式版を確認できず」は、今回参照した公式の対応機種情報に基づくスナップショットであり、将来の発表や地域別の例外を予言するものではない。PCの互換レイヤー、携帯PC、クラウドサービスを含める範囲によって「実質」の境界は変わる。</p>
+</section>
+
+<section class="section" id="upcoming">
+  <div class="section-head"><h2>今後の独占候補（まだ発売済み作品とは分ける）</h2></div>
+  <p class="section-intro">発売予定タイトルは「今すぐ遊べる実質独占」の集計に加えず、公式発表された計画として別枠に置く。延期や対応機種の追加で変化するため、購入判断の直前に再確認する。</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>タイトル</th><th>発表されている環境／予定</th><th>現時点の扱い</th><th>根拠</th></tr></thead>
+    <tbody>
+      <tr><td>Metroid Ravenous</td><td>Switch 2、2027年1月予定</td><td><span class="status future">発売予定・Switch 2側</span></td><td><a href="https://www.nintendo.com/jp/games/switch2/lineup/index.html?category=edition">任天堂 Switch 2 発売予定一覧</a></td></tr>
+      <tr><td>星のカービィ ワールドビヨンド</td><td>Switch 2、2027年春予定</td><td><span class="status future">発売予定・Switch 2側</span></td><td><a href="https://www.nintendo.com/jp/games/switch2/lineup/index.html?category=edition">任天堂 Switch 2 発売予定一覧</a></td></tr>
+      <tr><td>Xenoblade Genesis</td><td>Switch 2、2027年予定</td><td><span class="status future">発売予定・Switch 2側</span></td><td><a href="https://www.nintendo.com/jp/games/switch2/lineup/index.html?category=edition">任天堂 Switch 2 発売予定一覧</a></td></tr>
+      <tr><td>Pokémon ウインド・ウェーブ</td><td>Switch 2、2027年予定</td><td><span class="status future">発売予定・Switch 2側</span></td><td><a href="https://www.nintendo.com/jp/games/switch2/lineup/index.html?category=edition">任天堂 Switch 2 発売予定一覧</a></td></tr>
+      <tr><td>Clockwork Revolution</td><td>Xbox Series X|S／Windows PC／Steam、2027年予定</td><td><span class="status future">Xbox本体専用ではない</span></td><td><a href="https://www.xbox.com/ja-jp/games/clockwork-revolution">Xbox公式</a></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="section" id="purchase">
+  <div class="section-head"><h2>ゲームを幅広く遊ぶなら、何を組み合わせるか</h2></div>
+  <div class="bullets">
+    <article class="card"><h3>PC＋Switch／Switch 2</h3><p>PC独自の競技・MMO・シミュレーション系に、任天堂のIPとSwitch 2専用作を加える。非常に補完的だが、Ghost of YōteiやSAROSなどPlayStation側の現行専用作は残る。</p></article>
+    <article class="card"><h3>PC＋PS5</h3><p>PCの幅と、PC未移植のPS5作品を組み合わせられる。ただしマリオ、ゼルダ、どうぶつの森、スプラトゥーン等の任天堂作品は別にSwitch環境が必要。</p></article>
+    <article class="card"><h3>PCを持つ人がXboxを追加</h3><p>同じXbox／Windows発売作品のためだけにXbox本体を増やす利得は小さくなりやすい。価格、テレビ利用、Game Passの条件、後方互換で遊びたい旧作などが購入理由になる。</p></article>
+  </div>
+  <div class="callout"><strong>網羅性を最大化する現実的な構成：</strong>PC＋Nintendo Switch 2＋PS5。完全にすべての作品を保証する構成ではないが、PC独自カタログ、任天堂IP、PlayStationでのみ提供される現行作品という大きな三つの穴をそれぞれ埋めやすい。Xbox本体は、PCをすでに持つ人にとってはタイトル対応の重複が多いため、旧作互換や利用形態を重視する場合に追加価値を判断する。</div>
+</section>
+
+<section class="section" id="method">
+  <div class="section-head"><h2>この表を「完全なタイトル数ランキング」にしない理由</h2></div>
+  <p class="section-intro">同じ数を出すには、①発売済みのゲーム版を一意に識別する、②PCはSteamだけに限定しない、③地域ごとの販売差を扱う、④旧世代互換とサブスクを分ける、⑤Switch 2 Editionやリマスター版の重複を整理する、⑥発表後にPC版が追加されたタイトルを更新する、といったルールが必要になる。Steam全タイトル数を分母にし、Windows専用リストを分子にするだけでは、PCハードウェア独占率を計算したことにならない。</p>
+  <p class="section-intro">このレポートは、作品数の見せ方よりも「購入したいゲームを実際にどこで遊べるか」を優先している。全作品を一件ずつ調べた監査済み統計ではなく、各プラットフォームの構造と代表タイトルを示す、出典付きの判断用マップである。</p>
+</section>
+
+<section class="section" id="sources">
+  <div class="section-head"><h2>出典・公式資料</h2></div>
+  <p class="section-intro">販売元・プラットフォーム運営会社の製品ページ、公式サポート、公式発表を優先。PlayStationのPC方針については、2026年3月の報道と公式の商品ページを区別して引用している。</p>
+  <ol class="source-list">
+    <li><span class="snum">01</span><a href="https://www.nintendo.com/jp/games/switch2/lineup/index.html?category=edition">任天堂：Switch 2ソフト・発売予定一覧</a><small>Switch 2の専用作、Switch 2 Edition、今後の予定作品を確認。</small></li>
+    <li><span class="snum">02</span><a href="https://support.nintendo.com/jp/switch2/play/physical/index.html">任天堂：Switch 2でのSwitchソフト互換・エディションの説明</a><small>Switchソフトの互換性と、Switch 2 Editionを別種の独占として扱う際の注意。</small></li>
+    <li><span class="snum">03</span><a href="https://www.nintendo.com/jp/games/switch2/aaaaa/products/soft.html">任天堂：マリオカート ワールド</a><small>Switch 2対応・発売情報。</small></li>
+    <li><span class="snum">04</span><a href="https://www.nintendo.com/us/store/products/donkey-kong-bananza-switch-2/">任天堂：ドンキーコング バナンザ</a><small>Switch 2向け公式ストア情報。</small></li>
+    <li><span class="snum">05</span><a href="https://www.nintendo.com/us/store/products/pokemon-pokopia-switch-2/">任天堂：Pokémon Pokopia</a><small>「Switch 2専用」の公式記載、発売日、機種情報。</small></li>
+    <li><span class="snum">06</span><a href="https://www.playstation.com/en-us/games/astro-bot/">PlayStation：ASTRO BOT</a><small>PlayStation公式FAQにPS5専用と記載。</small></li>
+    <li><span class="snum">07</span><a href="https://www.playstation.com/ja-jp/games/ghost-of-yotei/">PlayStation：Ghost of Yōtei</a><small>公式製品ページのプラットフォーム情報。</small></li>
+    <li><span class="snum">08</span><a href="https://www.playstation.com/ja-jp/games/saros/">PlayStation：SAROS</a><small>公式製品ページと発売日。</small></li>
+    <li><span class="snum">09</span><a href="https://www.playstation.com/en-us/games/gran-turismo-7/">PlayStation：Gran Turismo 7</a><small>公式対応機種がPS4／PS5であることを確認。</small></li>
+    <li><span class="snum">10</span><a href="https://www.playstation.com/en-us/games/bloodborne/">PlayStation：Bloodborne</a><small>PS4版の公式製品ページ。</small></li>
+    <li><span class="snum">11</span><a href="https://bloomberg.com/news/articles/2026-03-04/sony-pulls-back-from-playstation-games-on-pc">Bloomberg（2026年3月4日）：Sony Pulls Back From PlayStation Games on PC</a><small>シングルプレイ大作のPC移植を縮小する方針についての報道。公式発表と同一視せず、政策動向の参考として使用。</small></li>
+    <li><span class="snum">12</span><a href="https://www.playstation.com/en-us/pc/pc-games/">PlayStation：PC向けゲーム一覧</a><small>PC版が提供されているPlayStation作品群。</small></li>
+    <li><span class="snum">13</span><a href="https://store.steampowered.com/app/730/CounterStrike_2/">Steam：Counter-Strike 2</a><small>PC対応OSとゲーム情報。</small></li>
+    <li><span class="snum">14</span><a href="https://store.steampowered.com/app/570/Dota_2/">Steam：Dota 2</a><small>Windows／macOS／Linuxの対応OS情報。</small></li>
+    <li><span class="snum">15</span><a href="https://www.leagueoflegends.com/ja-jp/download/">Riot Games：League of Legendsダウンロード</a><small>PC版のWindows／Macクライアント情報。</small></li>
+    <li><span class="snum">16</span><a href="https://worldofwarcraft.blizzard.com/en-us/start">Blizzard：World of Warcraft</a><small>Windows／Mac向け公式クライアントと利用情報。</small></li>
+    <li><span class="snum">17</span><a href="https://news.xbox.com/en-us/2026/10/01/gears-of-war-e-day-early-access-launch-trailer-xbox/">Xbox Wire（2026年10月1日）：Gears of War: E-Day</a><small>発売日、Xbox Series・Windows PC・Steamへの公式対応。</small></li>
+    <li><span class="snum">18</span><a href="https://news.xbox.com/en-us/2015/11/09/the-list-of-xbox-one-backward-compatibility-games-is-now-available/">Xbox Wire：後方互換対応タイトル一覧</a><small>Fable IIなど、旧作互換カタログの価値を確認するための資料。</small></li>
+    <li><span class="snum">19</span><a href="https://www.xbox.com/ja-jp/games/clockwork-revolution">Xbox：Clockwork Revolution</a><small>Xbox Series X|S／Windows PC、2027年予定の公式情報。</small></li>
+    <li><span class="snum">20</span><a href="https://www.theverge.com/news/989314/forza-horizon-6-ps5-release-date-january-2027-delay">The Verge：Forza Horizon 6のPS5版発売時期</a><small>Xbox／PC先行とPS5版の予定時期を分けて判断するための報道。</small></li>
+  </ol>
+</section>
+</main>
+<footer class="footer">作成日：2026年10月14日。これは「実質独占」の比較・購入判断を目的としたリサーチ資料です。タイトル数の全件監査や、すべての地域・配信サービスの可用性を保証するものではありません。対応機種は発表・販売状況により変わります。</footer>
+<script>
+(function(){
+  const search=document.getElementById('search');
+  const platform=document.getElementById('platform');
+  const kind=document.getElementById('kind');
+  const rows=Array.from(document.querySelectorAll('#games tbody tr'));
+  const count=document.getElementById('count');
+  function update(){
+    const q=search.value.trim().toLocaleLowerCase();
+    const p=platform.value;
+    const k=kind.value;
+    let visible=0;
+    rows.forEach(function(row){
+      const matchText=!q||row.textContent.toLocaleLowerCase().includes(q);
+      const matchPlatform=!p||row.dataset.platform===p;
+      const matchKind=!k||row.dataset.type===k;
+      const show=matchText&&matchPlatform&&matchKind;
+      row.hidden=!show;
+      if(show) visible++;
+    });
+    count.textContent='表示中：'+visible+'件 / カタログ掲載：'+rows.length+'件（代表例。全作品数ではありません）';
+  }
+  search.addEventListener('input',update);
+  platform.addEventListener('change',update);
+  kind.addEventListener('change',update);
+  update();
+})();
+</script>
+</body>
+</html>
